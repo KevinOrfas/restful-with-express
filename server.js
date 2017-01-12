@@ -32,6 +32,19 @@ app.get('/api/games/:id', (request,response) => {
     response.json(game[0]);
 });
 
+app.post('/api/games', (request,response) => {
+    const game = {
+        id: games.length + 1,
+        name: request.body.name,
+        created: new Date(),
+        groups: []
+    };
+
+    games.push(game);
+
+    response.json(game);
+});
+
 
 
 const hostname = 'localhost';
