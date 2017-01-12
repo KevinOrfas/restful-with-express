@@ -1,0 +1,11 @@
+{
+  "name": "future-games-of-london",
+  "version": "1.0.0",
+  "description": "Front End Assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anastasios Orfanidis",
+  "license": "ISC"
+}
