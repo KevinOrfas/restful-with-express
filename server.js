@@ -1,3 +1,5 @@
+/* jshint esversion: 6, node: true */
+
 'use strict';
 
 const express = require('express');
@@ -19,7 +21,7 @@ app.get('/api/games', (request,response) => {
     response.json(games);
 });
 
-app.get('/api/games/:id', (request,response) => {
+app.get('/api/games/:id', (request, response) => {
     const requestId = request.params.id;
     let game = games.filter(game => {
         return game.id == requestId;
@@ -32,7 +34,7 @@ app.get('/api/games/:id', (request,response) => {
     response.json(game[0]);
 });
 
-app.post('/api/games', (request,response) => {
+app.post('/api/games', (request, response) => {
     const game = {
         id: games.length + 1,
         name: request.body.name,
@@ -45,6 +47,39 @@ app.post('/api/games', (request,response) => {
     response.json(game);
 });
 
+
+app.put('/api/games/:id', (request, response) => {
+    const requestId = request.params.id;
+
+    let game = games.filter(game => {
+        return game.id == requestId;
+    })[0];
+
+    const index = games.indexOf(game);
+
+    const keys = Object.keys(request.body);
+    keys.forEach(key => {
+        game[key] = request.body[key];
+    });
+
+    games[index] = game;
+
+    response.json(games[index]);
+});
+
+app.delete('/api/games/:id', (request, response) => {
+    const requestId = request.param.id;
+
+    let game = games.filter(game => {
+        return game.id == requestId;
+    })[0];
+
+    const index = games.indexOf(game);
+
+    games.splice(index, 1);
+
+    response.json({message: `User ${requestId} deleted`});
+});
 
 
 const hostname = 'localhost';
