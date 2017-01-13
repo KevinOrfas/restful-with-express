@@ -9,7 +9,7 @@
     <div class="container">
 
       <div class="col-sm-6">
-        <form ng-submit="saveContact(contact)">
+        <form ng-submit="saveGame(game)">
           <div class="form-group">
             <input type="text" placeholder="Name" ng-model="game.name" class="form-control">
           </div>
@@ -21,8 +21,17 @@
       <div class="col-sm-6">
         <ul class="list-group">
           <li class="list-group-item" ng-repeat="game in games">
-            <h4>{{game.name}}</h4>
-          
+            <h3>{{game.name}}</h3>
+            <h4>status: {{game.status}}</h4>
+            <ul>
+                <li ng-repeat="group in game.groups">
+                    <p>ID: {{group.id}}</p>
+                    <p>Name: {{group.name}}</p>
+                    <p>Description: {{group.description}}</p>
+                    <p>proportion: {{group.proportion}}</p>
+                    <p>URL: {{group.url}}</p>
+                </li>
+            </ul>
           </li>
         </ul>
       </div>
