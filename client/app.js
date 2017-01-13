@@ -9,7 +9,6 @@
     $http.get('http://localhost:3001/api/games')
       .then(function(response) {
         $scope.games = response.data;
-
         
         
         $scope.games.forEach(function(element) {
@@ -18,13 +17,25 @@
             keys.forEach(key => {
                 if( key === 'groups') {
                     $scope.games.groups = element[key];
-                    console.log('Groups', $scope.games.groups);
+                    // console.log('Groups', $scope.games.groups);
+                }
+
+                if( key === 'description') {
+                    $scope.languages = element[key];
+                    console.log('Language', $scope.languages);
+                   
+                    $scope.languages.forEach(function(element) {
+                        console.log('key', element[key]);
+                         if(element[key] === 'en_GB') {
+                            console.log(true);
+                        }
+                    });
                 }
                 
             });         
         }, this);
 
-        console.log('Groups', $scope.games.groups);
+        
       });
     
     $scope.saveGame = function(game) {
