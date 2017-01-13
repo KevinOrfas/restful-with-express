@@ -1,24 +1,24 @@
 [{
 	"id": 1,
-	"name": "game data 1",
+	"name": "My cool game",
 	"created": 1484216018,
 	"groups": [{
 		"id": 1,
 		"name": "A",
-		"description": "this is group A",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"description": "this is group A ",
+		"url": "http://localhost/gameA1",
 		"proportion": 0.1
 	}, {
 		"id": 2,
 		"name": "B",
 		"description": "this is group B",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"url": "http://localhost/gameB1",
 		"proportion": 0.7
 	}, {
 		"id": 3,
 		"name": "C",
 		"description": "this is group C",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"url": "http://localhost/gameC1",
 		"proportion": 0.2
 	}],
 	"description": [{
@@ -32,25 +32,25 @@
 	"environment": "dev"
 }, {
 	"id": 2,
-	"name": "game data 2",
+	"name": "Game data 2",
 	"created": 1484216018,
 	"groups": [{
 		"id": 1,
 		"name": "A",
 		"description": "this is group A",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"url": "http://localhost/gameA2",
 		"proportion": 0.1
 	}, {
 		"id": 2,
 		"name": "B",
-		"description": "this is group B",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"description": "this is group BBBB",
+		"url": "http://localhost/gameB2",
 		"proportion": 0.7
 	}, {
 		"id": 3,
 		"name": "C",
 		"description": "this is group C",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"url": "http://localhost/gameC2",
 		"proportion": 0.2
 	}],
 	"description": [{
@@ -70,19 +70,19 @@
 		"id": 1,
 		"name": "A",
 		"description": "this is group A",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"url": "http://localhost/gameA3",
 		"proportion": 0.1
 	}, {
 		"id": 2,
 		"name": "B",
 		"description": "this is group B",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"url": "http://localhost/gameB3",
 		"proportion": 0.7
 	}, {
 		"id": 3,
 		"name": "C",
 		"description": "this is group C",
-		"url": "http://www.futuregamesoflondon.com/hungry-shark-evolution-partners-with-discovery-channel-to-ring-in-shark-week-with-in-game-events/",
+		"url": "http://localhost/gameC3",
 		"proportion": 0.2
 	}],
 	"description": [{
