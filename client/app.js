@@ -9,6 +9,8 @@
     $http.get('http://localhost:3001/api/games')
       .then(function(response) {
         $scope.games = response.data;
+
+        
         
         $scope.games.forEach(function(element) {
             const keys = Object.keys(element);
