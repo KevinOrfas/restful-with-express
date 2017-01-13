@@ -68,7 +68,8 @@ app.put('/api/games/:id', (request, response) => {
 });
 
 app.delete('/api/games/:id', (request, response) => {
-    const requestId = request.param.id;
+    
+    const requestId = request.params.id;
 
     let game = games.filter(game => {
         return game.id == requestId;
@@ -78,7 +79,7 @@ app.delete('/api/games/:id', (request, response) => {
 
     games.splice(index, 1);
 
-    response.json({message: `User ${requestId} deleted`});
+    response.json({ message: `User ${requestId} deleted` });
 });
 
 
