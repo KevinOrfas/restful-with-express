@@ -6,16 +6,14 @@ const Game = require('../model/Game');
 const router = express.Router();
 
 router.route('/')
-    .post((req, res) => {
+    .get((req, res) => {
 
-        const game = new Game(req.body);
-
-        game.save((err, game) => {
+        Game.find({}, (err,games) => {
             if(err) {
                 res.status(404).json(err);
             }
 
-            res.json(game);
+            res.json(games);
         });
     });
 
