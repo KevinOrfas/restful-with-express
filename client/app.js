@@ -9,32 +9,35 @@
     $http.get('http://localhost:3001/api/games')
       .then(function(response) {
         $scope.games = response.data;
-        
+        $scope.model = {};
         
         $scope.games.forEach(function(element) {
             const keys = Object.keys(element);
+            // const values = Object.values(element);
             
             keys.forEach(key => {
                 if( key === 'groups') {
                     $scope.games.groups = element[key];
-                    // console.log('Groups', $scope.games.groups);
                 }
 
                 if( key === 'description') {
                     $scope.languages = element[key];
-                    console.log('Language', $scope.languages);
-                   
                     $scope.languages.forEach(function(element) {
-                        console.log('key', element[key]);
-                         if(element[key] === 'en_GB') {
-                            console.log(true);
+                            var elementKey = Object.keys(element);
+                            var elementVal = Object.values(element);
+                            let elementDescKey = elementKey.pop();
+                            let elementDescVal = elementVal.pop();
+                            console.log('elementDesc', elementDescKey);
+                            $scope.model[elementDescKey] = elementDescVal;
+                         if(elementDescKey === 'en_GB') {
+                            $scope.language = elementDescKey;
+                            console.log('$scope.language', true);
                         }
                     });
                 }
-                
             });         
         }, this);
-
+        console.log('$scope.model', $scope.model);
         
       });
     
