@@ -49,5 +49,13 @@
       });
     };
 
+    $scope.editGame = function(game) {
+      $http.post('http://localhost:3001/api/games/587be2b4bf06b72b3174b422', game)
+        .then(function(response) {
+          $scope.games.push(response.data);
+          console.log(response.data);
+      });
+    };
+
   });
 })();
