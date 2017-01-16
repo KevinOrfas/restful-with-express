@@ -32,14 +32,13 @@
             <h4>status: {{game.status}}</h4>
             <h5 class="red" ng-class="{prod:'production', dev:'development' }[game.environment]">status: {{game.environment}}</h5>
             <label for="game-lang-desc">Select language description</label>
-            <!--<select id="game-lang-desc" ng-model="game.langDesc">
-                 <option value="GB">GB</option>
-                 <option value="FR">FR</option>
-                 <option value="US">US</option>
-            </select>-->
-            <!--<select ng-options="lang in languages"></select>-->
+           <select ng-model="description">
+                <option value="English Description.">GB</option>
+                <option value="French Description to appear here.">FR</option>
+                <option value="American English Description will be presented here.">US</option>
+            </select>
 
-            <!--{{productList}}-->
+            <p>{{description}}</p>
             <ul>
                 <li ng-repeat="group in game.groups">
                     <p>ID: {{group.id}}</p>

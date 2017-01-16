@@ -17,17 +17,19 @@
             keys.forEach(key => {
                 if( key === 'groups') {
                     $scope.games.groups = element[key];
-                    // console.log('Groups', $scope.games.groups);
                 }
 
                 if( key === 'description') {
                     $scope.languages = element[key];
-                    console.log('Language', $scope.languages);
                    
                     $scope.languages.forEach(function(element) {
-                        console.log('key', element[key]);
-                         if(element[key] === 'en_GB') {
-                            console.log(true);
+                        let getKey =  Object.keys(element).pop();
+                         if(getKey === 'en_GB') {
+                            $scope.desc = Object.values(element).pop();
+                        } else if (getKey === 'fr_FR') { 
+                            $scope.desc = Object.values(element).pop();
+                        } else {
+                          $scope.desc = Object.values(element).pop();
                         }
                     });
                 }
