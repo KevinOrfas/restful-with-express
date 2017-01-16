@@ -1,0 +1,15 @@
+<form class="create-form" role="form" ng-submit="main.createGame(main.newGame)" novalidate>
+    <div class="form-group">
+        <label>Game Name</label>
+        <input type="text" class="form-control" ng-model="main.newGame.name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label>Game Description</label>
+        <input type="text" class="form-control" ng-model="main.newGame.status" placeholder="Enter status">
+    </div>
+    <div class="form-group">
+        <label>Game Description</label>
+        <input type="text" class="form-control" ng-model="main.newGame.environment" placeholder="Enter env">
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">Create</button>
+</form>

@@ -5,12 +5,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-  <body ng-controller="gamesController">
+  <body ng-controller="gamesController as main">
 
     <div class="container">
 
       <div class="col-sm-6">
-        <form ng-submit="saveGame(game)">
+        <form>
           <div class="form-group">
             <input type="text" placeholder="Name" ng-model="game.name" class="form-control">
           </div>
@@ -21,14 +21,21 @@
             <input type="text" placeholder="Group Name" ng-model="game.environment" class="form-control">
           </div>-->
           
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" ng-click="saveGame(game)">Submit</button>
+          <button type="button" class="btn btn-primary" ng-click="editGame(game)">Submit</button>
         </form>
       </div>
-
+     
       <div class="col-sm-6">
+         <!--<div class="item" ng-repeat="item in main.items">
+          <h3>{{item.name}}</h3>
+          <strong>{{item.status}}</strong>
+          <strong>{{item.status}}</strong>
+        </div>-->
+
         <ul class="list-group">
-          <li class="list-group-item" ng-repeat="game in games">
-            <h3>{{game.name}}</h3>
+          <li class="list-group-item" ng-repeat="game in main.games" ng-click="main.setEditedGame(game)">
+            <h3> {{game.name}}</h3>
             <h4>status: {{game.status}}</h4>
             <h5 class="red" ng-class="{prod:'production', dev:'development' }[game.environment]">status: {{game.environment}}</h5>
             <label for="game-lang-desc">Select language description</label>

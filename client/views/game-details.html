@@ -1,0 +1,16 @@
+<form class="edit-form" role="form" ng-submit="main.updateGame(main.editedGame)" novalidate>
+    <div class="form-group">
+        <label>Game Name</label>
+        <input type="text" class="form-control" ng-model="main.editedGame.name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label>Status</label>
+        <input type="text" class="form-control" ng-model="main.editedGame.status" placeholder="Enter Status">
+    </div>
+    <div class="form-group">
+        <label>Env</label>
+        <input type="text" class="form-control" ng-model="main.editedGame.status" placeholder="Enter Env">
+    </div>
+  <button type="submit" class="btn btn-info btn-lg">Save</button>
+  <button type="button" class="btn btn-default btn-lg pull-right" ng-click="main.cancelEditing()">Cancel</button>
+</form>
